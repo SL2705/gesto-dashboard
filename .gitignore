@@ -1,0 +1,22 @@
+# Python / Django
+venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+.env
+*.log
+
+# Node / React
+node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# Sistema
+.DS_Store
+Thumbs.db
