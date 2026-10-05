@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "badge": "Monitoreo de WIP",
+    "title": "Dashboard de WIP",
+    "subtitle": "Monitoreo en tiempo real de las etapas críticas de manufactura.",
+    "refresh": "Actualizar",
+    "refreshing": "Actualizando...",
+    "readyToRefresh": "Listo para actualizar",
+    "refreshIn": "Disponible en {{seconds}}s",
+    "lastUpdate": "Última actualización: {{time}}",
+    "lastUpdateEmpty": "Última actualización: --"
+  },
+  "families": {
+    "proyecto_a": "Proyecto A",
+    "proyecto_b": "Proyecto B"
+  },
+  "summaryCard": {
+    "titleSuffix": "WIP",
+    "totalNote": "Total de unidades en las etapas críticas de {{family}}.",
+    "breakdownLabel": "Desglose por SKU_MODEL",
+    "empty": "No hay unidades en este momento.",
+    "more": "+{{count}} más"
+  },
+  "executionStatus": {
+    "title": "Estado de Ejecución",
+    "subtitle": "Estado global del WIP actual de {{family}}.",
+    "testing": "En prueba",
+    "failed": "Fallidas",
+    "offline": "Fuera de línea"
+  },
+  "stageChart": {
+    "title": "WIP por Etapa",
+    "subtitle": "Haz clic en una etapa para ver el detalle de los seriales.",
+    "empty": "Todavía no hay datos."
+  },
+  "stageDetailsPanel": {
+    "title": "Detalle de Etapas",
+    "subtitle": "Haz clic en cualquier etapa para ver la lista de seriales."
+  },
+  "topStayTime": {
+    "title": "Mayor Tiempo en WIP",
+    "subtitle": "Unidades con más tiempo dentro del WIP en este momento.",
+    "badge": "TOP {{count}}",
+    "empty": "No hay unidades en este momento."
+  },
+  "failedPanel": {
+    "title": "WIP - Fallas por Etapa",
+    "subtitle": "Unidades fallidas simuladas, agrupadas por etapa.",
+    "colStage": "Etapa",
+    "colFailedUnits": "Unidades Fallidas",
+    "colTopError": "Error Principal",
+    "empty": "No hay unidades fallidas en este momento."
+  },
+  "modal": {
+    "title": "Detalle de Etapa",
+    "units": "unidades",
+    "loading": "Cargando detalle de la etapa...",
+    "empty": "No se encontraron unidades para esta etapa.",
+    "colUsn": "USN",
+    "colModel": "Modelo",
+    "colSku": "SKU_MODEL",
+    "colMo": "MO",
+    "colUpn": "UPN",
+    "colStatus": "Estado",
+    "colPod": "POD",
+    "colStayTime": "Tiempo en WIP"
+  },
+  "status": {
+    "loading": "Cargando datos...",
+    "showing": "Mostrando datos simulados de WIP para {{family}}.",
+    "connectionError": "No se pudo conectar con el backend de WIP.",
+    "stageDetailsError": "No se pudieron cargar los detalles de la etapa."
+  },
+  "language": {
+    "label": "Idioma"
+  },
+  "footer": {
+    "tagline": "WIP de manufactura simulado con fines de demostración."
+  },
+  "errors": {
+    "Sensor timeout": "Tiempo de espera del sensor agotado",
+    "Voltage out of range": "Voltaje fuera de rango",
+    "Firmware mismatch": "Incompatibilidad de firmware",
+    "Thermal shutdown": "Apagado por temperatura",
+    "Communication lost with tester": "Se perdió comunicación con el tester"
+  }
+}

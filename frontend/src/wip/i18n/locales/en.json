@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "badge": "WIP Monitoring",
+    "title": "WIP Dashboard",
+    "subtitle": "Real-time monitoring for critical manufacturing stages.",
+    "refresh": "Refresh",
+    "refreshing": "Refreshing...",
+    "readyToRefresh": "Ready to refresh",
+    "refreshIn": "Refresh available in {{seconds}}s",
+    "lastUpdate": "Last update: {{time}}",
+    "lastUpdateEmpty": "Last update: --"
+  },
+  "families": {
+    "proyecto_a": "Project A",
+    "proyecto_b": "Project B"
+  },
+  "summaryCard": {
+    "titleSuffix": "WIP",
+    "totalNote": "Total units across the {{family}} critical stages.",
+    "breakdownLabel": "Breakdown by SKU_MODEL",
+    "empty": "No units right now.",
+    "more": "+{{count}} more"
+  },
+  "executionStatus": {
+    "title": "Execution Status",
+    "subtitle": "Global status across the current {{family}} WIP.",
+    "testing": "Testing",
+    "failed": "Failed",
+    "offline": "Offline"
+  },
+  "stageChart": {
+    "title": "WIP by Stage",
+    "subtitle": "Click a stage card to view serial details.",
+    "empty": "No data yet."
+  },
+  "stageDetailsPanel": {
+    "title": "Stage Details",
+    "subtitle": "Click any stage card to open the serial list."
+  },
+  "topStayTime": {
+    "title": "Top StayTime",
+    "subtitle": "Units with the highest time in WIP right now.",
+    "badge": "TOP {{count}}",
+    "empty": "No units right now."
+  },
+  "failedPanel": {
+    "title": "WIP - Failed by Stage",
+    "subtitle": "Simulated failed units grouped by stage.",
+    "colStage": "Stage",
+    "colFailedUnits": "Failed Units",
+    "colTopError": "Top Error",
+    "empty": "No failed units right now."
+  },
+  "modal": {
+    "title": "Stage Details",
+    "units": "units",
+    "loading": "Loading stage details...",
+    "empty": "No units found for this stage.",
+    "colUsn": "USN",
+    "colModel": "Model",
+    "colSku": "SKU_MODEL",
+    "colMo": "MO",
+    "colUpn": "UPN",
+    "colStatus": "Status",
+    "colPod": "POD",
+    "colStayTime": "Stay Time"
+  },
+  "status": {
+    "loading": "Loading data...",
+    "showing": "Showing simulated WIP data for {{family}}.",
+    "connectionError": "Could not connect to the WIP backend.",
+    "stageDetailsError": "Could not load stage details."
+  },
+  "language": {
+    "label": "Language"
+  },
+  "footer": {
+    "tagline": "Simulated manufacturing WIP for demo purposes."
+  },
+  "errors": {
+    "Sensor timeout": "Sensor timeout",
+    "Voltage out of range": "Voltage out of range",
+    "Firmware mismatch": "Firmware mismatch",
+    "Thermal shutdown": "Thermal shutdown",
+    "Communication lost with tester": "Communication lost with tester"
+  }
+}
