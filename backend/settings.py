@@ -10,22 +10,43 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+
+from dotenv import load_dotenv
+import pymysql
+
+# PyMySQL se hace pasar por mysqlclient para que Django lo use como backend 'mysql'.
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(BASE_DIR / ".env")
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-g-!dhnwckkqy2u2@fdl%_itpv@1f(8t6fwrcm!p9-2q(1eh!&g'
+SECRET_KEY = os.getenv(
+    "DJANGO_SECRET_KEY",
+    "django-insecure-g-!dhnwckkqy2u2@fdl%_itpv@1f(8t6fwrcm!p9-2q(1eh!&g",
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DJANGO_DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    host.strip()
+    for host in os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+    if host.strip()
+]
+
+# Cada cuántos segundos se regenera el WIP simulado (ver miapi/services/wip_simulator.py).
+WIP_SIMULATION_TTL_SECONDS = int(os.getenv("WIP_SIMULATION_TTL_SECONDS", "20"))
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 # Application definition
@@ -78,8 +99,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('MYSQL_DATABASE', 'gesto_wip'),
+        'USER': os.getenv('MYSQL_USER', 'root'),
+        'PASSWORD': os.getenv('MYSQL_PASSWORD', ''),
+        'HOST': os.getenv('MYSQL_HOST', '127.0.0.1'),
+        'PORT': os.getenv('MYSQL_PORT', '3306'),
     }
 }
 
@@ -133,4 +158,6 @@ MAILERS = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173", # El puerto por defecto de Vite (React)
     "http://127.0.0.1:5173",
+    "http://localhost:5174", # Fallback: Vite sube aquí si el 5173 ya está ocupado
+    "http://127.0.0.1:5174",
 ]
