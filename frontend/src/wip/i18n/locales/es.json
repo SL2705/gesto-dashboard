@@ -1,7 +1,7 @@
 {
   "hero": {
     "badge": "Monitoreo de WIP",
-    "title": "Dashboard de WIP",
+    "title": "Dashbord de WIP",
     "subtitle": "Monitoreo en tiempo real de las etapas críticas de manufactura.",
     "refresh": "Actualizar",
     "refreshing": "Actualizando...",
