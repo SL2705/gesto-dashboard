@@ -1,0 +1,65 @@
+Práctica en Equipos  
+
+Elaborar un manual/documento del proceso donde cada paso esté respaldado por una captura de pantalla debidamente explicada y contextualizada.  
+
+No se aceptarán capturas de pantalla recortadas, debe contener captura de pantalla completa donde se veo claramente fecha y hora de la computadora 
+
+
+El equipo ha puesto en producción una "web" (mínimo un index.html y un style.css, de hecho es el desarrollo que plantearon en clase, continúan trabajando en el desarrollo de la práctica 1), pero el cliente reporta errores críticos (bugs) y quiere mejoras visuales inmediatas. 
+
+Deben usar Git Flow para arreglar fallos mientras otros añaden funciones. 
+
+
+
+Estructura de Roles
+
+Todo el equipo debe cambiar roles 
+
+Líder (QA/Release Manager): No escribe código nuevo. Su misión es revisar que el código de los demás no rompa la página y gestionar las ramas main (Producción) y develop (Desarrollo). 
+Desarrolladores (Frontend/Fixers): Encargados de las mejoras y de arreglar los "incendios". 
+Paso 1: Punto de Partida  
+
+El Líder debe subir un proyecto base que ya tenga errores de base. 
+
+Repositorio base: Un index.html con un error de ortografía visible y un style.css con un color de fondo "horrible” 
+Ramas: El Líder asegura que existan main y develop. 
+Paso 2: Tareas Simultáneas 
+
+El líder divide a los desarrolladores en dos misiones que chocarán entre sí: 
+
+Misión A (Hotfix - Urgente): Deben crear una rama hotfix/error-ortografia desde main. Deben arreglar el texto y subirlo directo a main (y luego sincronizar con develop). 
+Misión B (Feature - Estética): Deben crear una rama feature/mejorar-estetica desde develop. Deben cambiar el CSS por algo profesional y añadir un footer. 
+El conflicto real: Cuando la Misión B intente integrarse, se darán cuenta de que el código de main (el arreglo del texto) no está en su rama de trabajo. 
+
+
+
+Paso 3: Revisión de Código 
+
+Esta vez, el Líder no puede aprobar un PR si no se cumple lo siguiente: 
+
+El código debe estar indentado. 
+Los mensajes de commit deben ser descriptivos (ej: fix: corregido error en el título en lugar de update). 
+Si hay un conflicto, el desarrollador debe resolverlo en su local usando git merge develop antes de que el Líder toque el botón de "Merge". 
+Paso 4: Re-crear un escenario de conflicto para implementar cada comando de emergencia  
+1. Git Stash 
+
+Escenario: Estás a mitad de un cambio, el código no funciona, pero tu líder te pide que cambies de rama urgentemente. 
+
+Comando: git stash 
+Traducción: "Guarda mis cambios actuales en un cajón temporal y deja mi rama limpia". 
+Para recuperar: git stash pop (Saca los cambios del cajón). 
+2. El Historial Simplificado 
+
+Escenario: Quieres ver quién hizo qué sin tantas letras. 
+
+Comando: git log --oneline --graph --all 
+Efecto: Muestra un mapa visual de las ramas y commits en la terminal. 
+3. Sincronización Forzada (The Update) 
+
+Escenario: El Hotfix ya se subió a main, pero mi rama feature está "vieja". 
+
+Comando: 
+git checkout develop 
+git pull origin main (Traes lo que se arregló en producción a desarrollo). 
+git checkout feature/mi-tarea 
+git merge develop 
