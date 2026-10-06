@@ -42,7 +42,12 @@
   overflow-x: hidden;
   font-family: "Inter", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--wip-text);
-  background:#39FF14;
+  background:
+    radial-gradient(circle at 8% -10%, rgba(37, 99, 235, 0.14), transparent 32%),
+    radial-gradient(circle at 96% 0%, rgba(139, 92, 246, 0.14), transparent 30%),
+    radial-gradient(circle at 50% 100%, rgba(13, 148, 136, 0.08), transparent 40%),
+    linear-gradient(180deg, #f8fbff 0%, #eef3fb 45%, #e9eef8 100%);
+
   text-align: left;
   -webkit-font-smoothing: antialiased;
 }
