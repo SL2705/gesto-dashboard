@@ -74,7 +74,7 @@ export default function AppHeader({ loading, lastUpdated, onRefresh }) {
       <div className="wip-app-header-inner">
         <div className="wip-app-header-left">
           <span className="wip-app-logo-dot" />
-          <h1 id="titulo-principal" className="wip-app-title rebajado">{t('hero.title')}</h1>
+          <h1 id="titulo-principal" className="wip-app-title">{t('hero.title')}</h1>
         </div>
 
         <div className="wip-app-header-right">

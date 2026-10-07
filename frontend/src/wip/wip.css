@@ -882,8 +882,3 @@
     transition-duration: 0.001ms !important;
   }
 }
-
-.rebajado {
-  color: #dc2626;
-  text-decoration: line-through;
-}
