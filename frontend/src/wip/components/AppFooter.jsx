@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
+/* ajuste persona 1 */
+
 const APP_VERSION = '1.0'
 
 export default function AppFooter() {
